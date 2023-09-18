@@ -1,0 +1,700 @@
+import java.util.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.border.*;
+import javax.swing.event.*;
+class snake {
+    public static void main(String[] args) {
+
+        // main frame
+        JFrame j1 = new JFrame("Dragon and Ladder");
+        ImageIcon customIcon = new ImageIcon("title.jpg");
+        j1.setIconImage(customIcon.getImage());
+        int newWidth = 600;  
+        int newHeight = 600; 
+
+    
+        // Images
+        JLabel l1;
+        ImageIcon s1 = new ImageIcon("s1.png");
+        l1 = new JLabel(s1);
+        l1.setBounds(60, 550, 50, 53);
+        j1.add(l1);
+
+        JLabel l2; 
+        ImageIcon s2 = new ImageIcon("s2.png"); 
+        l2 = new JLabel(s2); 
+        l2.setBounds(110,550,50,53); 
+        j1.add(l2); 
+
+        JLabel l3; 
+        ImageIcon s3 = new ImageIcon("s3.png"); 
+        l3 = new JLabel(s3); 
+        l3.setBounds(160,550,50,53);
+        j1.add(l3); 
+
+        
+        JLabel l4;
+        ImageIcon s4 = new ImageIcon("s4.png");
+        l4 = new JLabel(s4);
+        l4.setBounds(210,550,50,53);
+        j1.add(l4);
+
+        JLabel l5; 
+        ImageIcon s5 = new ImageIcon("s5.png"); 
+        l5 = new JLabel(s5); 
+        l5.setBounds(260,550,50,53);
+        j1.add(l5); 
+
+        JLabel l6; 
+        ImageIcon s6 = new ImageIcon("s6.png"); 
+        l6 = new JLabel(s6); 
+        l6.setBounds(310,550,50,53);
+        j1.add(l6); 
+
+        JLabel l7; 
+        ImageIcon s7 = new ImageIcon("s7.png"); 
+        l7 = new JLabel(s7); 
+        l7.setBounds(360,550,50,53);
+        j1.add(l7); 
+
+        JLabel l8;
+        ImageIcon s8= new ImageIcon("s8.png");
+        l8 = new JLabel(s8);
+        l8.setBounds(410,550,50,53);
+        j1.add(l8);
+
+        JLabel l9; 
+        ImageIcon s9 = new ImageIcon("s9.png"); 
+        l9 = new JLabel(s9); 
+        l9.setBounds(460,550,50,53); 
+        j1.add(l9); 
+
+        JLabel l10; 
+        ImageIcon s10 = new ImageIcon("s10.png"); 
+        l10 = new JLabel(s10); 
+        l10.setBounds(510,550,50,53);
+        j1.add(l10); 
+
+        
+        JLabel l11;
+        ImageIcon s11 = new ImageIcon("s11.png");
+        l11 = new JLabel(s11);
+        l11.setBounds(510,500,50,53);
+        j1.add(l11);
+
+        JLabel l12; 
+        ImageIcon s12 = new ImageIcon("s12.png"); 
+        l12 = new JLabel(s12); 
+        l12.setBounds(460,500,50,53);
+        j1.add(l12); 
+
+        JLabel l13; 
+        ImageIcon s13 = new ImageIcon("s13.png"); 
+        l13 = new JLabel(s13); 
+        l13.setBounds(410,500,50,53);
+        j1.add(l13); 
+
+        
+        JLabel l14;
+        ImageIcon s14 = new ImageIcon("s14.png");
+        l14 = new JLabel(s14);
+        l14.setBounds(360,500,50,53);
+        j1.add(l14);
+
+        JLabel l15; 
+        ImageIcon s15 = new ImageIcon("s15.png"); 
+        l15 = new JLabel(s15); 
+        l15.setBounds(310,500,50,53);
+        j1.add(l15); 
+
+        JLabel l16; 
+        ImageIcon s16 = new ImageIcon("s16.png"); 
+        l16 = new JLabel(s16); 
+        l16.setBounds(260,500,50,53);
+        j1.add(l16); 
+
+        JLabel l17; 
+        ImageIcon s17 = new ImageIcon("s17.png"); 
+        l17 = new JLabel(s17); 
+        l17.setBounds(210,500,50,53);
+        j1.add(l17); 
+
+        
+        JLabel l18;
+        ImageIcon s18= new ImageIcon("s18.png");
+        l18 = new JLabel(s18);
+        l18.setBounds(160,500,50,53);
+        j1.add(l18);
+
+        JLabel l19; 
+        ImageIcon s19 = new ImageIcon("s19.png"); 
+        l19 = new JLabel(s19); 
+        l19.setBounds(110,500,50,53);
+        j1.add(l19); 
+
+        JLabel l20; 
+        ImageIcon s20 = new ImageIcon("s20.png"); 
+        l20 = new JLabel(s20); 
+        l20.setBounds(60,500,50,53);
+        j1.add(l20); 
+
+        JLabel l21;
+        ImageIcon s21 = new ImageIcon("s21.png");
+        l21 = new JLabel(s21);
+        l21.setBounds(60,450,50,53);
+        j1.add(l21);
+
+        JLabel l22; 
+        ImageIcon s22 = new ImageIcon("s22.png"); 
+        l22 = new JLabel(s22); 
+        l22.setBounds(110,450,50,53); 
+        j1.add(l22); 
+
+        JLabel l23; 
+        ImageIcon s23 = new ImageIcon("s23.png"); 
+        l23 = new JLabel(s23); 
+        l23.setBounds(160,450,50,53);
+        j1.add(l23); 
+
+        JLabel l24;
+        ImageIcon s24 = new ImageIcon("s24.png");
+        l24 = new JLabel(s24);
+        l24.setBounds(210,450,50,53);
+        j1.add(l24);
+
+        JLabel l25; 
+        ImageIcon s25 = new ImageIcon("s25.png"); 
+        l25 = new JLabel(s25); 
+        l25.setBounds(260,450,50,53);
+        j1.add(l25); 
+
+        JLabel l26; 
+        ImageIcon s26 = new ImageIcon("s26.png"); 
+        l26 = new JLabel(s26); 
+        l26.setBounds(310, 450, 50, 53);
+        j1.add(l26); 
+
+        JLabel l27; 
+        ImageIcon s27 = new ImageIcon("s27.png"); 
+        l27 = new JLabel(s27); 
+        l27.setBounds(360, 450, 50, 53);
+        j1.add(l27); 
+
+        JLabel l28;
+        ImageIcon s28= new ImageIcon("s28.png");
+        l28 = new JLabel(s28);
+        l28.setBounds(410, 450, 50, 53);
+        j1.add(l28);
+
+        JLabel l29; 
+        ImageIcon s29 = new ImageIcon("s29.png"); 
+        l29 = new JLabel(s29); 
+        l29.setBounds(460,450,50,53); 
+        j1.add(l29); 
+
+        JLabel l30; 
+        ImageIcon s30 = new ImageIcon("s30.png"); 
+        l30 = new JLabel(s30); 
+        l30.setBounds(510, 450, 50,53);
+        j1.add(l30); 
+        
+        JLabel l31;
+        ImageIcon s31 = new ImageIcon("s31.png");
+        l31 = new JLabel(s31);
+        l31.setBounds(510,400,50,53);
+        j1.add(l31);
+
+        JLabel l32; 
+        ImageIcon s32 = new ImageIcon("s32.png"); 
+        l32 = new JLabel(s32); 
+        l32.setBounds(460,400,50,53); 
+        j1.add(l32); 
+
+        JLabel l33; 
+        ImageIcon s33 = new ImageIcon("s33.png"); 
+        l33 = new JLabel(s33); 
+        l33.setBounds(410,400,50,53);
+        j1.add(l33); 
+        
+        JLabel l34;
+        ImageIcon s34 = new ImageIcon("s34.png");
+        l34 = new JLabel(s34);
+        l34.setBounds(360,400,50,53);
+        j1.add(l34);
+
+        JLabel l35; 
+        ImageIcon s35 = new ImageIcon("s35.png"); 
+        l35 = new JLabel(s35); 
+        l35.setBounds(310,400,50,53);
+        j1.add(l35); 
+
+        JLabel l36; 
+        ImageIcon s36 = new ImageIcon("s36.png"); 
+        l36 = new JLabel(s36); 
+        l36.setBounds(260,400,50,53);
+        j1.add(l36); 
+
+        JLabel l37; 
+        ImageIcon s37 = new ImageIcon("s37.png"); 
+        l37 = new JLabel(s37); 
+        l37.setBounds(210,400,50,53);
+        j1.add(l37); 
+
+        JLabel l38;
+        ImageIcon s38= new ImageIcon("s38.png");
+        l38 = new JLabel(s38);
+        l38.setBounds(160,400,50,53);
+        j1.add(l38);
+
+        JLabel l39; 
+        ImageIcon s39 = new ImageIcon("s39.png"); 
+        l39 = new JLabel(s39); 
+        l39.setBounds(110,400,50,53);
+        j1.add(l39); 
+
+        JLabel l40; 
+        ImageIcon s40 = new ImageIcon("s40.png"); 
+        l40 = new JLabel(s40); 
+        l40.setBounds(60,400,50,53);
+        j1.add(l40); 
+
+        JLabel l41;
+        ImageIcon s41 = new ImageIcon("s41.png");
+        l41 = new JLabel(s41);
+        l41.setBounds(60,350,50,53);
+        j1.add(l41);
+
+        JLabel l42; 
+        ImageIcon s42 = new ImageIcon("s42.png"); 
+        l42 = new JLabel(s42); 
+        l42.setBounds(110,350,50,53); 
+        j1.add(l42); 
+
+        JLabel l43; 
+        ImageIcon s43 = new ImageIcon("s43.png"); 
+        l43 = new JLabel(s43); 
+        l43.setBounds(160,350,50,53);
+        j1.add(l43); 
+
+        
+        JLabel l44;
+        ImageIcon s44 = new ImageIcon("s44.png");
+        l44 = new JLabel(s44);
+        l44.setBounds(210,350,50,53);
+        j1.add(l44);
+
+        JLabel l45; 
+        ImageIcon s45 = new ImageIcon("s45.png"); 
+        l45 = new JLabel(s45); 
+        l45.setBounds(260,350,50,53);
+        j1.add(l45); 
+
+        JLabel l46; 
+        ImageIcon s46 = new ImageIcon("s46.png"); 
+        l46 = new JLabel(s46); 
+        l46.setBounds(310, 350, 50, 53);
+        j1.add(l46); 
+
+        JLabel l47; 
+        ImageIcon s47 = new ImageIcon("s47.png"); 
+        l47 = new JLabel(s47); 
+        l47.setBounds(360, 350, 50, 53);
+        j1.add(l47); 
+
+        JLabel l48;
+        ImageIcon s48= new ImageIcon("s48.png");
+        l48 = new JLabel(s48);
+        l48.setBounds(410, 350, 50, 53);
+        j1.add(l48);
+
+        JLabel l49; 
+        ImageIcon s49 = new ImageIcon("s49.png"); 
+        l49 = new JLabel(s49); 
+        l49.setBounds(460,350,50,53); 
+        j1.add(l49); 
+
+        JLabel l50; 
+        ImageIcon s50 = new ImageIcon("s50.png"); 
+        l50 = new JLabel(s50); 
+        l50.setBounds(510, 350, 50,53);
+        j1.add(l50); 
+        
+         JLabel l51;
+        ImageIcon s51 = new ImageIcon("s51.png");
+        l51 = new JLabel(s51);
+        l51.setBounds(510,300,50,53);
+        j1.add(l51);
+
+        JLabel l52; 
+        ImageIcon s52 = new ImageIcon("s52.png"); 
+        l52 = new JLabel(s52); 
+        l52.setBounds(460,300,50,53); 
+        j1.add(l52); 
+
+        JLabel l53; 
+        ImageIcon s53 = new ImageIcon("s53.png"); 
+        l53 = new JLabel(s53); 
+        l53.setBounds(410,300,50,53);
+        j1.add(l53); 
+        
+        JLabel l54;
+        ImageIcon s54 = new ImageIcon("s54.png");
+        l54 = new JLabel(s54);
+        l54.setBounds(360,300,50,53);
+        j1.add(l54);
+
+        JLabel l55; 
+        ImageIcon s55 = new ImageIcon("s55.png"); 
+        l55 = new JLabel(s55); 
+        l55.setBounds(310,300,50,53);
+        j1.add(l55); 
+
+        JLabel l56; 
+        ImageIcon s56 = new ImageIcon("s56.png"); 
+        l56 = new JLabel(s56); 
+        l56.setBounds(260,300,50,53);
+        j1.add(l56); 
+
+        JLabel l57; 
+        ImageIcon s57 = new ImageIcon("s57.png"); 
+        l57 = new JLabel(s57); 
+        l57.setBounds(210,300,50,53);
+        j1.add(l57); 
+
+        JLabel l58;
+        ImageIcon s58= new ImageIcon("s58.png");
+        l58 = new JLabel(s58);
+        l58.setBounds(160,300,50,53);
+        j1.add(l58);
+
+        JLabel l59; 
+        ImageIcon s59 = new ImageIcon("s59.png"); 
+        l59 = new JLabel(s59); 
+        l59.setBounds(110,300,50,53);
+        j1.add(l59); 
+
+        JLabel l60; 
+        ImageIcon s60 = new ImageIcon("s60.png"); 
+        l60 = new JLabel(s60); 
+        l60.setBounds(60,300,50,53);
+        j1.add(l60); 
+
+        JLabel l61;
+        ImageIcon s61 = new ImageIcon("s61.png");
+        l61 = new JLabel(s61);
+        l61.setBounds(60,250,50,53);
+        j1.add(l61);
+
+        JLabel l62; 
+        ImageIcon s62 = new ImageIcon("s62.png"); 
+        l62 = new JLabel(s62); 
+        l62.setBounds(110,250,50,53); 
+        j1.add(l62); 
+
+        JLabel l63; 
+        ImageIcon s63 = new ImageIcon("s63.png"); 
+        l63 = new JLabel(s63); 
+        l63.setBounds(160,250,50,53);
+        j1.add(l63); 
+
+        
+        JLabel l64;
+        ImageIcon s64 = new ImageIcon("s64.png");
+        l64 = new JLabel(s64);
+        l64.setBounds(210,250,50,53);
+        j1.add(l64);
+
+        JLabel l65; 
+        ImageIcon s65 = new ImageIcon("s65.png"); 
+        l65 = new JLabel(s65); 
+        l65.setBounds(260,250,50,53);
+        j1.add(l65); 
+
+        JLabel l66; 
+        ImageIcon s66 = new ImageIcon("s66.png"); 
+        l66 = new JLabel(s66); 
+        l66.setBounds(310, 250, 50, 53);
+        j1.add(l66); 
+
+        JLabel l67; 
+        ImageIcon s67 = new ImageIcon("s67.png"); 
+        l67 = new JLabel(s67); 
+        l67.setBounds(360, 250, 50, 53);
+        j1.add(l67); 
+
+        JLabel l68;
+        ImageIcon s68= new ImageIcon("s68.png");
+        l68 = new JLabel(s68);
+        l68.setBounds(410, 250, 50, 53);
+        j1.add(l68);
+
+        JLabel l69; 
+        ImageIcon s69 = new ImageIcon("s69.png"); 
+        l69 = new JLabel(s69); 
+        l69.setBounds(460,250,50,53); 
+        j1.add(l69); 
+
+        JLabel l70; 
+        ImageIcon s70 = new ImageIcon("s70.png"); 
+        l70 = new JLabel(s70); 
+        l70.setBounds(510, 250, 50,53);
+        j1.add(l70); 
+
+         JLabel l71;
+        ImageIcon s71 = new ImageIcon("s71.png");
+        l71 = new JLabel(s71);
+        l71.setBounds(510,200,50,53);
+        j1.add(l71);
+
+        JLabel l72; 
+        ImageIcon s72 = new ImageIcon("s72.png"); 
+        l72 = new JLabel(s72); 
+        l72.setBounds(460,200,50,53); 
+        j1.add(l72); 
+
+        JLabel l73; 
+        ImageIcon s73 = new ImageIcon("s73.png"); 
+        l73 = new JLabel(s73); 
+        l73.setBounds(410,200,50,53);
+        j1.add(l73); 
+        
+        JLabel l74;
+        ImageIcon s74 = new ImageIcon("s74.png");
+        l74 = new JLabel(s74);
+        l74.setBounds(360,200,50,53);
+        j1.add(l74);
+
+        JLabel l75; 
+        ImageIcon s75 = new ImageIcon("s75.png"); 
+        l75 = new JLabel(s75); 
+        l75.setBounds(310,200,50,53);
+        j1.add(l75); 
+
+        JLabel l76; 
+        ImageIcon s76 = new ImageIcon("s76.png"); 
+        l76 = new JLabel(s76); 
+        l76.setBounds(260,200,50,53);
+        j1.add(l76); 
+
+        JLabel l77; 
+        ImageIcon s77 = new ImageIcon("s77.png"); 
+        l77 = new JLabel(s77); 
+        l77.setBounds(210,200,50,53);
+        j1.add(l77); 
+
+        JLabel l78;
+        ImageIcon s78= new ImageIcon("s78.png");
+        l78 = new JLabel(s78);
+        l78.setBounds(160,200,50,53);
+        j1.add(l78);
+
+        JLabel l79; 
+        ImageIcon s79 = new ImageIcon("s79.png"); 
+        l79 = new JLabel(s79); 
+        l79.setBounds(110,200,50,53);
+        j1.add(l79); 
+
+        JLabel l80; 
+        ImageIcon s80 = new ImageIcon("s80.png"); 
+        l80 = new JLabel(s80); 
+        l80.setBounds(60,200,50,53);
+        j1.add(l80); 
+
+        JLabel l81;
+        ImageIcon s81 = new ImageIcon("s81.png");
+        l81 = new JLabel(s81);
+        l81.setBounds(60,150,50,53);
+        j1.add(l81);
+
+        JLabel l82; 
+        ImageIcon s82 = new ImageIcon("s82.png"); 
+        l82 = new JLabel(s82); 
+        l82.setBounds(110,150,50,53); 
+        j1.add(l82); 
+
+        JLabel l83; 
+        ImageIcon s83 = new ImageIcon("s83.png"); 
+        l83 = new JLabel(s83); 
+        l83.setBounds(160,150,50,53);
+        j1.add(l83); 
+
+        JLabel l84;
+        ImageIcon s84 = new ImageIcon("s84.png");
+        l84 = new JLabel(s84);
+        l84.setBounds(210,150,50,53);
+        j1.add(l84);
+
+        JLabel l85; 
+        ImageIcon s85 = new ImageIcon("s85.png"); 
+        l85 = new JLabel(s85); 
+        l85.setBounds(260,150,50,53);
+        j1.add(l85); 
+
+        JLabel l86; 
+        ImageIcon s86 = new ImageIcon("s86.png"); 
+        l86 = new JLabel(s86); 
+        l86.setBounds(310, 150, 50, 53);
+        j1.add(l86); 
+
+        JLabel l87; 
+        ImageIcon s87 = new ImageIcon("s87.png"); 
+        l87 = new JLabel(s87); 
+        l87.setBounds(360, 150, 50, 53);
+        j1.add(l87); 
+
+        JLabel l88;
+        ImageIcon s88= new ImageIcon("s88.png");
+        l88 = new JLabel(s88);
+        l88.setBounds(410, 150, 50, 53);
+        j1.add(l88);
+
+        JLabel l89; 
+        ImageIcon s89 = new ImageIcon("s89.png"); 
+        l89 = new JLabel(s89); 
+        l89.setBounds(460,150,50,53); 
+        j1.add(l89); 
+
+        JLabel l90; 
+        ImageIcon s90 = new ImageIcon("s90.png"); 
+        l90 = new JLabel(s90); 
+        l90.setBounds(510, 150, 50,53);
+        j1.add(l90);         
+
+         JLabel l91;
+        ImageIcon s91 = new ImageIcon("s91.png");
+        l91 = new JLabel(s91);
+        l91.setBounds(510,100,50,53);
+        j1.add(l91);
+
+        JLabel l92; 
+        ImageIcon s92 = new ImageIcon("s92.png"); 
+        l92 = new JLabel(s92); 
+        l92.setBounds(460,100,50,53); 
+        j1.add(l92); 
+
+        JLabel l93; 
+        ImageIcon s93 = new ImageIcon("s93.png"); 
+        l93 = new JLabel(s93); 
+        l93.setBounds(410,100,50,53);
+        j1.add(l93); 
+        
+        JLabel l94;
+        ImageIcon s94 = new ImageIcon("s94.png");
+        l94 = new JLabel(s94);
+        l94.setBounds(360,100,50,53);
+        j1.add(l94);
+
+        JLabel l95; 
+        ImageIcon s95 = new ImageIcon("s95.png"); 
+        l95 = new JLabel(s95); 
+        l95.setBounds(310,100,50,53);
+        j1.add(l95); 
+
+        JLabel l96; 
+        ImageIcon s96 = new ImageIcon("s96.png"); 
+        l96 = new JLabel(s96); 
+        l96.setBounds(260,100,50,53);
+        j1.add(l96); 
+
+        JLabel l97; 
+        ImageIcon s97 = new ImageIcon("s97.png"); 
+        l97 = new JLabel(s97); 
+        l97.setBounds(210,100,50,53);
+        j1.add(l97); 
+
+        JLabel l98;
+        ImageIcon s98= new ImageIcon("s98.png");
+        l98 = new JLabel(s98);
+        l98.setBounds(160,100,50,53);
+        j1.add(l98);
+
+        JLabel l99; 
+        ImageIcon s99 = new ImageIcon("s99.png"); 
+        l99 = new JLabel(s99); 
+        l99.setBounds(110,100,50,53);
+        j1.add(l99); 
+
+        JLabel l100; 
+        ImageIcon s100 = new ImageIcon("s100.png"); 
+        l100 = new JLabel(s100); 
+        l100.setBounds(60,100,50,53);
+        j1.add(l100); 
+
+
+        j1.setSize(700, 700);
+        j1.setLayout(null);
+        j1.setVisible(true);
+
+       
+
+        //  Dice Code
+
+        /* JButton rollDiceButton = new JButton("Roll Dice");
+        rollDiceButton.setBounds(600, 600, 100, 50);
+        j1.add(rollDiceButton);
+
+        JLabel diceResultLabel = new JLabel("Dice Result: ");
+        diceResultLabel.setBounds(600, 650, 100, 30);
+        j1.add(diceResultLabel);
+
+        rollDiceButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int diceResult = rollDice();
+                diceResultLabel.setText("Dice Result: " + diceResult);
+
+                // Update the player's position based on the dice roll
+                currentPlayerPosition += diceResult;
+
+                // Implement logic to check for snake or ladder and update the position accordingly
+                currentPlayerPosition = handleSnakeAndLadder(currentPlayerPosition);
+
+                // Redraw the player's token at the new position
+                int x = calculateX(currentPlayerPosition);
+                int y = calculateY(currentPlayerPosition);
+                l1.setBounds(x, y, 50, 53);
+
+                // Check if the player has reached the end
+                if (currentPlayerPosition >= 100) {
+                    // Handle game over
+                    // You can display a message or take other actions here
+                }
+            }
+        });
+
+        j1.setSize(700, 700);
+        j1.setLayout(null);
+        j1.setVisible(true);
+    }
+
+    private static int rollDice() {
+        // Simulate a dice roll and return the result (1 to 6)
+        return new Random().nextInt(6) + 1;
+    }
+
+    private static int handleSnakeAndLadder(int position) {
+        // Implement your logic to handle snakes and ladders
+        // You can use a switch statement or if-else conditions
+        // Return the updated position after applying the snake/ladder rules
+        return position;
+    }
+
+    // Define methods to calculate the X and Y coordinates based on player position
+    private static int calculateX(int position) {
+        // Implement your logic here
+        return 0;
+    }
+
+    private static int calculateY(int position) {
+        // Implement your logic here
+        return 0; */
+
+
+    }
+}
+
+
+
+        
